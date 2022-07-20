@@ -10,6 +10,7 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
+  Home,
   Ecommerce,
   Orders,
   Calendar,
@@ -31,6 +32,7 @@ import {
 import { useStateContext } from "./contexts/ContextProvider";
 
 import "./App.css";
+import Invoice from "./pages/Invoice";
 
 const App = () => {
   const {
@@ -81,8 +83,13 @@ const App = () => {
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
+                <Route path="/home" element={<Home />} />
 
                 {/* Pages */}
+                <Route path="/invoice" element={<Invoice />} />
+                {/* <Route path="/summary" element={<Summary />} */}
+
+                {/* Sample Pages */}
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
                 <Route path="/customers" element={<Customers />} />
