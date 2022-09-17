@@ -11,6 +11,7 @@ import {
 } from "@syncfusion/ej2-react-grids";
 
 import { Button } from "../components";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { useStateContext } from "../contexts/ContextProvider";
 import { earningData } from "../data/dummy";
 import { invoiceGrid, invoiceData } from "../data/myDummy";
@@ -24,8 +25,8 @@ const Home = () => {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-gray-400">Something</p>
-              <p className="text-2xl">Something</p>
+              <p className="font-bold text-gray-400">Ayuma Enterprise</p>
+              <p className="text-2xl">Something else</p>
             </div>
           </div>
           <div className="mt-6">
@@ -47,8 +48,8 @@ const Home = () => {
             >
               <button
                 type="button"
-                style={{
-                  color: item.iconColor,
+                syle={{
+									color: item.iconColor,
                   backgroundColor: item.iconBg,
                 }}
                 className="text-2xl opacity-0.9 rounded-full p-4 hover:drop-shadow-xl"
@@ -67,15 +68,14 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Invoice Updates only shows the latest 5 updates */}
       <div className="md:flex md:flex-wrap justify-center">
         <div className="bg-white m-3 p-4 rounded-2xl lg:w-780">
           <p className="font-semibold text-xl m-3">Invoice Updates</p>
           <GridComponent
             id="gridcomp"
             dataSource={invoiceData}
-            allowPaging
             allowSorting
-            toolbar={["Search"]}
             width="auto"
           >
             <ColumnsDirective>
@@ -83,8 +83,15 @@ const Home = () => {
                 <ColumnDirective key={index} {...item} />
               ))}
             </ColumnsDirective>
-            <Inject services={[Page, Search, Toolbar, Sort]} />
+            <Inject services={[Toolbar, Sort]} />
           </GridComponent>
+          <div className="flex justify-right mt-2">
+
+          <button className="relative">
+            <AiOutlineArrowRight />
+						<span>More Invoice</span>
+          </button>
+          </div>
         </div>
       </div>
     </div>
