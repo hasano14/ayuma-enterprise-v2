@@ -11,6 +11,7 @@ const invoiceGridStatus = (props) => (
 );
 
 export const invoiceGrid = [
+  { type: "checkbox", width: "50" },
   {
     field: "InvoiceID",
     headerText: "Invoice #",
@@ -43,19 +44,19 @@ export const invoiceData = [
   {
     InvoiceID: "1",
     Name: "Choice Daily",
-    InvoiceDate: "01/01/2020",
+    InvoiceDate: "01/02/2020",
     Status: "Paid",
   },
   {
     InvoiceID: "2",
     Name: "Choice Daily",
-    InvoiceDate: "01/01/2020",
+    InvoiceDate: "01/03/2020",
     Status: "Paid",
   },
   {
     InvoiceID: "3",
     Name: "Choice Daily",
-    InvoiceDate: "01/01/2020",
+    InvoiceDate: "01/01/2023",
     Status: "Pending",
   },
   {

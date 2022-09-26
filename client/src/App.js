@@ -33,6 +33,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 
 import "./App.css";
 import Invoice from "./pages/Invoice";
+import Billing from "./pages/Billing";
 
 const App = () => {
   const {
@@ -87,6 +88,7 @@ const App = () => {
 
                 {/* Pages */}
                 <Route path="/invoice" element={<Invoice />} />
+                <Route path="/billing" element={<Billing />} />
                 {/* <Route path="/summary" element={<Summary />} */}
 
                 {/* Sample Pages */}
@@ -95,14 +97,12 @@ const App = () => {
                 <Route path="/customers" element={<Customers />} />
 
                 {/* Apps */}
-
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
 
                 {/* Charts */}
-
                 <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />

@@ -1,7 +1,8 @@
 import React from "react";
 import { FiHome, FiBook } from "react-icons/fi";
-import { FaFileInvoice } from "react-icons/fa";
+import { TbFileInvoice } from "react-icons/tb";
 import { RiBillLine } from "react-icons/ri";
+import { MdOutlineInventory2 } from "react-icons/md";
 
 export const links = [
   {
@@ -22,25 +23,25 @@ export const links = [
     links: [
       {
         name: "invoice",
-        icon: <FaFileInvoice />,
+        icon: <TbFileInvoice />,
       },
       {
         name: "billing",
         icon: <RiBillLine />,
+      },
+      {
+        name: "inventory",
+        icon: <MdOutlineInventory2 />,
       },
     ],
   },
   {
     title: "Example Pages",
     links: [
-        {
+      {
         name: "ecommerce",
       },
       {
-        name: "home",
-        icon: <FiHome />,
-      },
-       {
         name: "orders",
       },
       {
@@ -48,7 +49,8 @@ export const links = [
       },
       {
         name: "customers",
-      },{
+      },
+      {
         name: "calendar",
       },
       {
@@ -59,7 +61,8 @@ export const links = [
       },
       {
         name: "color-picker",
-      },{
+      },
+      {
         name: "line",
       },
       {
@@ -84,6 +87,6 @@ export const links = [
       {
         name: "stacked",
       },
-    ]
-  }
+    ],
+  },
 ];
