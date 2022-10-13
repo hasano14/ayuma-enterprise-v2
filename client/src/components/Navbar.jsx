@@ -63,7 +63,7 @@ const Navbar = () => {
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
-      <div className="flex">
+      {/* <div className="flex">
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
@@ -88,17 +88,17 @@ const Navbar = () => {
               <span className="text-gray-400 text-14">Hi, </span>{" "}
               <span className="text-gray-400 font-bold ml-1 text-14">
                 {/* UserName */}
-                User
-              </span>
+                {/* User */}
+              {/* </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
-        </TooltipComponent>
-        {isClicked.cart && <Cart />}
+        </TooltipComponent> */}
+        {/* {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}
-        {isClicked.userProfile && <UserProfile />}
-      </div>
+        {isClicked.userProfile && <UserProfile />} */}
+      {/* </div> */}
     </div>
   );
 };

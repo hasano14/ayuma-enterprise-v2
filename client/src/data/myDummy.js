@@ -10,13 +10,35 @@ const invoiceGridStatus = (props) => (
   </div>
 );
 
+export const rawMaterialGrid = [
+  { type: "checkbox", width: "50" },
+  {
+    field: "RawNumber",
+    headerText: "Num",
+    width: "80",
+    textAlign: "center",
+  },
+  {
+    field: "RawName",
+    headerText: "Name",
+    width: "120",
+    textAlign: "center",
+  },
+  {
+    field: "RawQuantity",
+    headerText: "Quantity",
+    width: "120",
+    textAlign: "center",
+  },
+];
+
 export const invoiceGrid = [
   { type: "checkbox", width: "50" },
   {
     field: "InvoiceID",
     headerText: "Invoice #",
     width: "80",
-    textAlign: "center",
+    textAlign: "Center",
   },
   {
     field: "InvoiceDate",
@@ -38,6 +60,12 @@ export const invoiceGrid = [
     textAlign: "center",
     template: invoiceGridStatus,
   },
+];
+
+/* Exporting the data to be used in the grid. */
+export const rawMaterialData = [
+  { RawNumber: "1", RawName: "Minyak", RawQuantity: "12" },
+  { RawNumber: "2", RawName: "Bawang", RawQuantity: "10" },
 ];
 
 export const invoiceData = [

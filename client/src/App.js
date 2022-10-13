@@ -34,6 +34,8 @@ import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 import Invoice from "./pages/Invoice";
 import Billing from "./pages/Billing";
+import RawMaterial from "./pages/RawMaterial";
+import Packaging from "./pages/Packaging";
 
 const App = () => {
   const {
@@ -82,35 +84,38 @@ const App = () => {
 
               <Routes>
                 {/* Dashboard */}
-                <Route path="/" element={<Ecommerce />} />
-                <Route path="/ecommerce" element={<Ecommerce />} />
+                {/* <Route path="/" element={<Ecommerce />} />
+                <Route path="/ecommerce" element={<Ecommerce />} /> */}
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
 
                 {/* Pages */}
                 <Route path="/invoice" element={<Invoice />} />
                 <Route path="/billing" element={<Billing />} />
+                <Route path="/Raw-Materials" element={<RawMaterial />} />
+                <Route path="/packaging" element={<Packaging />} />
                 {/* <Route path="/summary" element={<Summary />} */}
 
                 {/* Sample Pages */}
-                <Route path="/orders" element={<Orders />} />
+                {/* <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
+                <Route path="/customers" element={<Customers />} /> */}
 
                 {/* Apps */}
-                <Route path="/calendar" element={<Calendar />} />
+                {/* <Route path="/calendar" element={<Calendar />} />
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
-                <Route path="/color-picker" element={<ColorPicker />} />
+                <Route path="/color-picker" element={<ColorPicker />} /> */}
 
                 {/* Charts */}
-                <Route path="/line" element={<Line />} />
+                {/* <Route path="/line" element={<Line />} />
                 <Route path="/area" element={<Area />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
                 <Route path="/color-mapping" element={<ColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
-                <Route path="/stacked" element={<Stacked />} />
+                <Route path="/stacked" element={<Stacked />} /> */}
               </Routes>
             </div>
           </div>

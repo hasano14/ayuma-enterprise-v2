@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   GridComponent,
   ColumnsDirective,
@@ -19,6 +19,22 @@ import { invoiceGrid, invoiceData } from "../data/myDummy";
 const Home = () => {
   const { currentColor } = useStateContext();
 
+  const [invoiceData, setInvoiceData] = useState([]);
+
+  useEffect(() => {
+    async function getInvoiceData() {
+      const response = await fetch(`http://localhost:5000/invoiceData/`);
+      if (!response.ok) {
+        const message = `An error occurred (B): ${response.statusText}`;
+        window.alert(message);
+        return;
+      }
+      const invoiceData = await response.json();
+      setInvoiceData(invoiceData);
+    }
+    getInvoiceData();
+  }, [invoiceData.length]);
+
   return (
     <div className="mt-24">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -26,7 +42,7 @@ const Home = () => {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Ayuma Enterprise</p>
-              <p className="text-2xl">Something else</p>
+              {/* <p className="text-2xl">Something else</p> */}
             </div>
           </div>
           <div className="mt-6">
@@ -40,7 +56,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+        {/* <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
           {earningData.map((item) => (
             <div
               key={item.title}
@@ -65,7 +81,7 @@ const Home = () => {
               <p className="text-sm text-gray-500 mt-1">{item.title}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Invoice Updates only shows the latest 5 updates */}
@@ -85,13 +101,6 @@ const Home = () => {
             </ColumnsDirective>
             <Inject services={[Toolbar, Sort]} />
           </GridComponent>
-          <div className="flex justify-right mt-2">
-
-          <button className="relative">
-            <AiOutlineArrowRight />
-						<span>More Invoice</span>
-          </button>
-          </div>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { FiHome, FiBook } from "react-icons/fi";
 import { TbFileInvoice } from "react-icons/tb";
 import { RiBillLine } from "react-icons/ri";
 import { MdOutlineInventory2 } from "react-icons/md";
+import { BiPackage } from "react-icons/bi";
 
 export const links = [
   {
@@ -12,14 +13,14 @@ export const links = [
         name: "home",
         icon: <FiHome />,
       },
-      {
-        name: "summary",
-        icon: <FiBook />,
-      },
+      // {
+      //   name: "summary",
+      //   icon: <FiBook />,
+      // },
     ],
   },
   {
-    title: "Pages",
+    title: "Cash Flow",
     links: [
       {
         name: "invoice",
@@ -29,64 +30,66 @@ export const links = [
         name: "billing",
         icon: <RiBillLine />,
       },
-      {
-        name: "inventory",
-        icon: <MdOutlineInventory2 />,
-      },
     ],
   },
   {
-    title: "Example Pages",
+    title: "Inventory",
     links: [
-      {
-        name: "ecommerce",
-      },
-      {
-        name: "orders",
-      },
-      {
-        name: "employees",
-      },
-      {
-        name: "customers",
-      },
-      {
-        name: "calendar",
-      },
-      {
-        name: "kanban",
-      },
-      {
-        name: "editor",
-      },
-      {
-        name: "color-picker",
-      },
-      {
-        name: "line",
-      },
-      {
-        name: "area",
-      },
-
-      {
-        name: "bar",
-      },
-      {
-        name: "pie",
-      },
-      {
-        name: "financial",
-      },
-      {
-        name: "color-mapping",
-      },
-      {
-        name: "pyramid",
-      },
-      {
-        name: "stacked",
-      },
+      { name: "Raw-Materials", icon: <MdOutlineInventory2 /> },
+      { name: "packaging", icon: <BiPackage /> },
     ],
   },
+  // {
+  //   title: "Example Pages",
+  //   links: [
+  //     {
+  //       name: "ecommerce",
+  //     },
+  //     {
+  //       name: "orders",
+  //     },
+  //     {
+  //       name: "employees",
+  //     },
+  //     {
+  //       name: "customers",
+  //     },
+  //     {
+  //       name: "calendar",
+  //     },
+  //     {
+  //       name: "kanban",
+  //     },
+  //     {
+  //       name: "editor",
+  //     },
+  //     {
+  //       name: "color-picker",
+  //     },
+  //     {
+  //       name: "line",
+  //     },
+  //     {
+  //       name: "area",
+  //     },
+  //     {
+  //       name: "bar",
+  //     },
+  //     {
+  //       name: "pie",
+  //     },
+  //     {
+  //       name: "financial",
+  //     },
+  //     {
+  //       name: "color-mapping",
+  //     },
+  //     {
+  //       name: "pyramid",
+  //     },
+  //     {
+  //       name: "stacked",
+  //     },
+  //   ],
+  // },
 ];
