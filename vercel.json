@@ -2,7 +2,7 @@
   "version": 2,
   "public": false,
   "builds": [
-    { "src": "package.json", "use": "@vercel/static-build" },
+    { "src": "/client/package.json", "use": "@vercel/static-build" },
     { "src": "/backend/server.js", "use": "@vercel/node" }
   ],
   "rewrites": [
