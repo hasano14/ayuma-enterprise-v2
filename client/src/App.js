@@ -91,7 +91,7 @@ const App = () => {
 
                 {/* Pages */}
                 <Route path="/invoice" element={<Invoice />} />
-                <Route path="/billing" element={<Billing />} />
+                {/* <Route path="/billing" element={<Billing />} /> */}
                 <Route path="/Raw-Materials" element={<RawMaterial />} />
                 <Route path="/packaging" element={<Packaging />} />
                 {/* <Route path="/summary" element={<Summary />} */}

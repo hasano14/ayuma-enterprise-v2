@@ -26,10 +26,10 @@ export const links = [
         name: "invoice",
         icon: <TbFileInvoice />,
       },
-      {
-        name: "billing",
-        icon: <RiBillLine />,
-      },
+      // {
+      //   name: "billing",
+      //   icon: <RiBillLine />,
+      // },
     ],
   },
   {
