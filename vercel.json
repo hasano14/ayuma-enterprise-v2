@@ -7,6 +7,6 @@
   ],
   "rewrites": [
     { "source": "/backend/(.*)", "destination": "/backend/server.js" },
-    { "source": "(.*)", "destination": "/index.html" }
+    { "source": "/client/public/(.*)", "destination": "client/public/index.html" }
   ]
 }
